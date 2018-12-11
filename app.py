@@ -7,6 +7,11 @@ app = Flask(__name__)
 CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = ""
 
+heroku = Heroku(app)
+db = SQLAlchemy(app)
+
+class
+
 @app.route('/')
 def home ():
   return "<h1>Hello!</h1>"
