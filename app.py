@@ -10,7 +10,18 @@ app.config['SQLALCHEMY_DATABASE_URI'] = ""
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 
-class
+class Movie(db.Model)
+  __tablename__ = "movies"
+  id = db.Column(db.Integer, primary_key=True)
+  title = db.Column(db.String(120))
+  rating = db.column(db.Integer)
+
+  def __init__(self, title, rating);
+    self.title = title
+    self.rating = rating
+
+  def __repr__(self)
+    return '<Title %r>' % self.title
 
 @app.route('/')
 def home ():
